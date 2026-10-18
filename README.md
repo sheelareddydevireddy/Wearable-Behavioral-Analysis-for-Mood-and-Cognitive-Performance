@@ -1,6 +1,6 @@
 # Sustained Bad Mood, Behavior, and Cognitive Performance
 
-TL;DR: Processed 2M+ minute-level wearable records and analyzed matched data from 90 participants to test whether sustained bad mood was associated with lower cognition through changes in movement and sleep. Mood did not predict behavior, so the proposed pathway was not supported. An exploratory within-person sleep association emerged (approximately −0.10 SD per additional recorded hour), but may reflect limitations in calendar-date sleep alignment.
+TL;DR: Analyzed 2M+ minute-level wearable records from 90 participants to test whether sustained bad mood was linked to lower cognition through changes in movement and sleep. Mood did not predict behavior, so this pathway was not supported. More sleep than usual was linked to slightly lower cognition, but this finding may be affected by how sleep was assigned to calendar dates.
 
 Tools: Python, pandas, statsmodels (mixed-effects and clustered OLS)
 
