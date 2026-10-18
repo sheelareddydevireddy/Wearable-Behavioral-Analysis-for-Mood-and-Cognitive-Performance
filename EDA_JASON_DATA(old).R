@@ -391,9 +391,12 @@ print(results_df1)
 #takeaway: a linear model is better than the rf but both have weak signal, not the right research question. 
 
 
+#FEEDBACK FROM ADVISOR:
+
 #signal processing w
 #physioloical signs 
 #dimensionality reduction! 
+
 
 #one value per subject rather than multiple 
 #acc data^
