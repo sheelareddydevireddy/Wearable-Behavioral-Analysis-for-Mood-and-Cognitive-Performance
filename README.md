@@ -106,6 +106,16 @@ current sleep minutes ~ prior sustained bad mood + prior available sleep minutes
 
 No behavioral outcome showed a significant association with prior sustained bad mood.
 
+| Behavioral outcome | Mood coefficient (β) | 95% CI | p-value | Observations | Participants |
+|---|---:|---:|---:|---:|---:|
+| Total steps | -258.034 | [-749.951, 233.883] | .304 | 770 | 74 |
+| Sedentary minutes | 2.069 | [-15.578, 19.716] | .818 | 735 | 70 |
+| Maximum sedentary-bout length | -2.227 | [-12.635, 8.181] | .675 | 735 | 70 |
+| MVPA steps | -0.749 | [-3.247, 1.749] | .557 | 770 | 74 |
+| Sedentary-to-upright transitions | -0.210 | [-2.160, 1.739] | .833 | 770 | 74 |
+| Sleep minutes | -4.134 | [-17.868, 9.599] | .555 | 735 | 70 |
+
+
 ### Step 2: Prior behavior predicting cognition
 
 Separate participant random-intercept models tested whether previous available behavior predicted current cognitive performance while controlling for prior cognition.
@@ -120,13 +130,17 @@ current cognition ~ prior available sleep minutes + prior cognition
 
 Several mixed models estimated the participant random-intercept variance at or near zero. Clustered OLS models were therefore used as robustness checks to account for repeated observations within participants when estimating standard errors.
 
-In the clustered OLS checks:
+Relevant clustered OLS results:
 
-- Prior sedentary minutes were not significant at the conventional 0.05 level (`p = .063`).
-- Prior maximum sedentary-bout length was not significant (`p = .130`).
-- Prior sleep minutes had a statistically significant negative association with cognition (`p = .006`).
+| Prior behavior | Coefficient (β) | 95% CI | p-value | Observations | Participants |
+|---|---:|---:|---:|---:|---:|
+| Sedentary minutes | 0.0003 | [-0.000016, 0.001] | .063 | 1,017 | 84 |
+| Maximum sedentary-bout length | -0.0004 | [-0.001, 0.000] | .130 | 1,017 | 84 |
+| Sleep minutes | -0.0007 | [-0.001, -0.000] | .006 | 1,017 | 84 |
 
 The sleep result was counterintuitive and should be treated as exploratory. Sleep was aggregated by calendar date and may not represent the sleep period immediately preceding cognition. Irregular observation gaps may also affect temporal alignment.
+
+Each additional hour of prior recorded sleep was associated with approximately 0.04 standard deviations lower cognition (−0.0007 × 60 = −0.042), after controlling for prior cognition.
 
 ### Step 3: Exploratory combined pathway
 
@@ -160,26 +174,15 @@ Results:
 - Prior cognition: `p = .115`
 - Model R²: approximately `.021`
 
-This suggests that the exploratory sleep association was driven by occasions when a person recorded more sleep than usual, not by people who generally slept more. The effect still requires cautious interpretation because of how sleep was aligned to calendar dates.
+This suggests that the exploratory sleep association may reflect within-person variation in sleep rather than between-person differences.
 
-## Main conclusion
+In practical terms, one additional hour of sleep relative to a participant’s usual amount was associated with approximately 0.10 standard deviations lower cognition (−0.0016 × 60 = −0.096).
 
-The available data did not support the proposed pathway that sustained bad mood changes movement or sleep behavior and thereby lowers cognitive performance.
+## Conclusion and limitations
 
-Specifically:
-
-- Sustained bad mood did not significantly predict the selected behavioral measures.
-- Most prior behavioral measures did not robustly predict later cognition after accounting for prior cognition.
-- The sleep association survived the clustered OLS robustness check but was negative, small, and difficult to interpret.
-- Because the mood-to-behavior path was absent, a formal mediation claim was not justified.
-
-The findings should be reported as null or inconclusive evidence rather than evidence that mood has no effect. The study may have been limited by sparse and irregular observations, available-day rather than strictly consecutive-day lags, uncertain nonwear coding, calendar-day sleep aggregation, a reduced matched sample, and a participant population that included older adults with signs of cognitive impairment.
-
-## Why advanced signal processing was not used
-
-Topological or frequency-domain signal processing was not the appropriate next step for this analysis. The available columns were already device-derived minute-level summaries rather than raw high-frequency three-axis accelerometer signals. 
-
-## Final interpretation
-
-The analysis successfully tested a plausible behavioral pathway instead of forcing a direct mood-cognition explanation. The results did not establish that sustained bad mood erodes cognition through changes in daily movement, sedentary behavior, or sleep. The most defensible conclusion is that no clear behavioral pathway was detected in the available dataset, while the sleep finding remains exploratory and requires better sleep timing and validation.
-
+- Sustained bad mood did not significantly predict movement, sedentary behavior, or sleep.
+- Most prior behavioral measures were not significantly associated with later cognition after controlling for prior cognition.
+- Prior sleep showed a small negative association with cognition, but this counterintuitive finding remains exploratory.
+- Formal mediation was not supported because mood did not predict the proposed behavioral mediators.
+- Limitations include irregular observations, nonconsecutive lags, uncertain nonwear classification, calendar-day sleep aggregation, and a reduced matched sample.
+- Advanced signal processing was not used because the data contained processed minute-level summaries rather than raw accelerometer signals.
